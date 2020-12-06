@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>All Products - Boost</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+		<div class="container">
+			<div class="navbar">
+				<div class="logo"> <img src="images/logo.png" width="125px"> </div>
+				<nav>
+					<ul>
+						<li><a href="index (2).html">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="contact us.html">Contact</a></li>
+						<li><a href="account.html">Account</a></li>
+					</ul>
+				</nav>
+				<img src="images/cart.png" width="30px" height="30px">
+			</div>
+		</div>
+
+
+<!-------------Single product---------->
+
+<div class="small-cont" id="productdetail">
+	<div class="row">
+		<div class="col2">
+			<img src="images/allproduct1.jpg" width="100%" id="ProductImg">
+
+
+
+
+
+		</div>
+		<div class="col2">
+			<p>Home / Sweat Shirt</p>
+			<h1>Mango Man Essential Sweatshirt</h1>
+			<h4>$99.0</h4>
+			<select>
+				<option>S</option>
+				<option>M</option>
+				<option>L</option>
+				<option>XL</option>
+			</select>
+			<input type="number" value="1" id="inputbox">
+			<a href="" class="button" id="addtocart">Add to Cart</a>
+			<h3>Product Details</h3>
+			<br>
+			<p>Stretchable poly-cotton blend heathered fabric <br>Embroidered ditsy graphic to front<br>Crew neck and cuffed sleeves<br>Each item sold separately</p>
+		</div>
+	</div>
+
+</div>
+
+<!-----title--->
+
+<div class="small-cont">
+	<div class="row-allproducts">
+		<h2>Related Products</h2>
+		<a href="products.html"><p>View More</p></a>
+	</div>
+</div>
+
+
+
+<div class="small-cont">
+
+<div class="row">
+			<div class="col4">
+				<img src="images/allproduct1.jpg">
+				<h4>Samsung Smartwatch</h4>
+				<div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
+				<p>$50.0</p>
+			</div>
+			<div class="col4">
+				<img src="images/allproduct2.jpg">
+				<h4>Reebok Boxing Gloves</h4>
+				<div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
+				<p>$120.0</p>
+			</div>
+			<div class="col4">
+				<img src="images/allproduct3.jpg">
+				<h4>Adidas Boost All Terrain</h4>
+				<div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
+				<p>$80.0</p>
+			</div>
+			<div class="col4">
+				<img src="images/allproduct4.jpg">
+				<h4>Nike Women Romper</h4>
+				<div class="rating">
+					<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i>
+					<p>$40.0</p>
+				</div>
+			</div>
+		</div>
+
+</div>
+
+
+	<div class="footer">
+		<div class="container" id="contfoot">
+			<div class="row">
+				<div class="footer1">
+					<h3>Download the App</h3>
+					<p>Download our app for Android and IOS</p>
+					<div class="applogo">
+						<img src="images/app-store.png">
+						<img src="images/play-store.png">
+					</div>
+				</div>
+				<div class="footer2">
+					<p>Boost produces and distributes fitness, running and CrossFit sportswear including clothing and footwear.</p>
+				</div>
+				<div class="footer3">
+					<h3>Useful Link</h3>
+					<ul>
+						<li>Sales</li>
+						<li>Blog</li>
+						<li>Return Policy</li>
+						<li>Careers</li>
+					</ul>
+				</div>
+				<div class="footer4">
+					<h3>Follow us</h3>
+					<ul>
+						<li>Instagram</li>
+						<li>Facebook</li>
+						<li>Twitter</li>
+						<li>YouTube</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<!-------Script----->
+
+<script>
+
+
+		var confirm = document.querySelector("#addtocart");
+		var  inputbox = document.querySelector("#inputbox");
+		confirm.addEventListener("click", whenClicked);
+
+		function whenClicked(){
+
+			if (inputbox.value >= 1 && inputbox.value < 6){
+				alert("Selected Item added to cart");
+			}
+
+			else if (inputbox.value > 5){
+				alert("Sorry! The maximum quantity allowed is 5. If you require bulk items, please get in touch with us through the Contact Us page. Thanks!")
+			}
+
+			else{
+				alert ("Add atleast 1 item in the quantity");
+			}
+			
+		}
+
+
+
+</script>
+
+
+</body>
+
+</html>
