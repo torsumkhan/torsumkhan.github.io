@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>All Products - Boost</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+		<div class="container">
+			<div class="navbar">
+				<div class="logo"> <img src="images/logo.png" width="125px"> </div>
+				<nav>
+					<ul>
+						<li><a href="index (2).html">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="contact us.html">Contact</a></li>
+						<li><a href="account.html">Account</a></li>
+					</ul>
+				</nav>
+				<img src="images/cart.png" width="30px" height="30px">
+			</div>
+		</div>
+
+
+<div class="contact-us">
+	<div class="container">
+		<h1>Connect With Us</h1>
+		<p>We would love to respond to your queries. <br>Feel free to send us a message and we will get in touch with via provided email at the earliest. <br>Happy Shopping!</p>
+
+		<div class="contact-box">
+			<div class="contact-left">
+				<div class = "error" id="error_message"></div>
+				<h3>Send your Request</h3>
+				<form id="myform" action="javascript:void(0);">
+					<div class="input-row">
+						<div class="input-group">
+
+							<input type="text" placeholder="Name" id="name">
+						</div>
+
+						<div class="input-group">
+
+							<input type="text" placeholder="Phone" id="phone">
+						</div>
+
+					</div>
+
+					<div class="input-row">
+						<div class="input-group">
+
+							<input type="email" placeholder="Email" id="email">
+						</div>
+
+						<div class="input-group">
+
+							<input type="text" placeholder="Order Number" id="order">
+						</div>
+
+					</div>
+
+
+					<textarea rows="5" placeholder="Your Message" id="message"></textarea>
+
+					<div class="btn">
+						<input type="submit" name="">
+					</div>
+
+					
+
+				</form>
+
+			</div>
+			<div class="contact-right">
+				<h3>Get in Touch</h3>
+
+				<table>
+					<tr>
+						<td>Email</td>
+						<td>hello@boost.com</td>
+					</tr>
+
+					<tr>
+						<td>Address</td>
+						<td>Square One Shopping Centre<br>100 City Centre Dr, Mississauga, ON L5B 2C9, Ontario</td>
+					</tr>
+
+					<tr>
+						<td>Phone</td>
+						<td>(647) 834-6742</td>
+					</tr>
+
+				</table>
+
+			</div>
+		</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="footer">
+		<div class="container" id="contfoot">
+			<div class="row">
+				<div class="footer1">
+					<h3>Download the App</h3>
+					<p>Download our app for Android and IOS</p>
+					<div class="applogo">
+						<img src="images/app-store.png">
+						<img src="images/play-store.png">
+					</div>
+				</div>
+				<div class="footer2">
+					<p>Boost produces and distributes fitness, running and CrossFit sportswear including clothing and footwear.</p>
+				</div>
+				<div class="footer3">
+					<h3>Useful Link</h3>
+					<ul>
+						<li>Sales</li>
+						<li>Blog</li>
+						<li>Return Policy</li>
+						<li>Careers</li>
+					</ul>
+				</div>
+				<div class="footer4">
+					<h3>Follow us</h3>
+					<ul>
+						<li>Instagram</li>
+						<li>Facebook</li>
+						<li>Twitter</li>
+						<li>YouTube</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<script type="text/javascript">
+	
+		var form = document.getElementById("myform");
+		form.addEventListener('submit', validation)
+function validation(){
+	var name = document.getElementById("name").value;
+	var phone = document.getElementById("phone").value;
+	var email = document.getElementById("email").value;
+	var order = document.getElementById("order").value;
+	var message = document.getElementById("message").value;
+	var error = document.getElementById("error_message");
+
+	var text;
+
+
+
+
+	error_message.style.padding = "10px";
+
+	if(name.length < 5){
+
+		text = "Please enter valid name";
+		error_message.innerHTML = text;
+
+	} else if(order.length < 5){
+
+		text = "Please enter valid order number";
+		error_message.innerHTML = text;
+
+	} else if(isNaN(phone) || phone.length != 10){
+
+		text = "Please enter valid phone number";
+		error_message.innerHTML = text;
+
+	} else if(!email.includes("@") || email.length < 5){
+
+		text = "Please enter valid email";
+		error_message.innerHTML = text;
+
+	} else if(message.length <=140){
+
+		text = "Please enter more than 140 characters";
+		error_message.innerHTML = text;
+
+	} else {
+		alert("Request sent. Customer service will contact you soon")
+	}
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
